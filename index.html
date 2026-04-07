@@ -16,54 +16,60 @@ title: Promove
           Tabelas Básicas
           <span class="arrow">▸</span>
         </div>
-
-        <ul class="submenu" id="submenu-tabelas">
-
-          <li class="submenu-item">
-            <div class="submenu-link" onclick="toggleSubSubmenu('sistemas')">
-              Sistemas de Pontos
-              <span class="arrow">▸</span>
-            </div>
-
-            <ul class="subsubmenu" id="subsubmenu-sistemas">
-              <li onclick="mostrar('niveis-carreira')">
-                Níveis Carreira
-              </li>
-
-          <!-- REQUISITOS -->
-          <li class="submenu-item">
-            <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
-              Requisitos
-              <span class="arrow">▸</span>
-            </div>
-
-            <ul class="subsubmenu" id="subsubmenu-requisito">
-              <li onclick="mostrar('requisito-tempo')">
-                Tempo de Efetivo Exercício no Nível
-              </li>
-              <li onclick="mostrar('requisito-desempenho')">
-                Desempenho no Exercício das Atribuições
-              </li>
-              <li onclick="mostrar('requisito-aperfeicoamento')">
-                Aperfeiçoamento
-              </li>
-              <li onclick="mostrar('requisito-responsabilidades')">
-                Assunção de Responsabilidades
-              </li>
-              <li onclick="mostrar('requisito-titulacao')">
-                Titulação Acadêmica
-              </li>
-              <li onclick="mostrar('requisito-qualificacao')">
-                Titulação e Qualificação Acadêmica
-              </li>
-            </ul>
+          <ul class="submenu" id="submenu-tabelas">
+          
+            <li class="submenu-item">
+              <div class="submenu-link" onclick="toggleSubSubmenu('sistemas')">
+                Sistemas de Pontos
+                <span class="arrow">▸</span>
+              </div>
+          
+              <ul class="subsubmenu" id="subsubmenu-sistemas">
+          
+                <!-- NÍVEIS CARREIRA -->
+                <li onclick="mostrar('niveis-carreira')">
+                  Níveis Carreira
+                </li>
+          
+                <!-- REQUISITOS (irmão de Níveis Carreira) -->
+                <li class="submenu-item">
+                  <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+                    Requisitos
+                    <span class="arrow">▸</span>
+                  </div>
+          
+                  <ul class="subsubmenu" id="subsubmenu-requisito">
+                    <li onclick="mostrar('requisito-tempo')">
+                      Tempo de Efetivo Exercício no Nível
+                    </li>
+                    <li onclick="mostrar('requisito-desempenho')">
+                      Desempenho no Exercício das Atribuições
+                    </li>
+                    <li onclick="mostrar('requisito-aperfeicoamento')">
+                      Aperfeiçoamento
+                    </li>
+                    <li onclick="mostrar('requisito-responsabilidades')">
+                      Assunção de Responsabilidades
+                    </li>
+                    <li onclick="mostrar('requisito-titulacao')">
+                      Titulação Acadêmica
+                    </li>
+                    <li onclick="mostrar('requisito-qualificacao')">
+                      Titulação e Qualificação Acadêmica
+                    </li>
+                  </ul>
+          
+                </li>
+          
+              </ul>
           </li>
 
-        </ul>
-      </li>
+      </ul>
 
-    </ul>
-  </aside>
+    </li>
+
+</ul>
+</aside>
 
   <!-- CONTEÚDO CENTRAL -->
   <main class="content">
