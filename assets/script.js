@@ -1,15 +1,21 @@
-function mostrar(id) {
-  document.querySelectorAll('.tela').forEach(tela => {
-    tela.classList.remove('ativa')
-  })
-
-  document.getElementById(id).classList.add('ativa')
+function toggleSubmenu(id) {
+  const submenu = document.getElementById("submenu-" + id);
+  submenu.classList.toggle("open");
 }
 
-function toggleSubmenu(nome) {
-  const submenu = document.getElementById('submenu-' + nome)
-  const botao = submenu.previousElementSibling
+function toggleSubSubmenu(id) {
+  const subsubmenu = document.getElementById("subsubmenu-" + id);
+  subsubmenu.classList.toggle("open");
+}
 
-  submenu.classList.toggle('aberto')
-  botao.classList.toggle('aberto')
+function mostrar(id) {
+  // esconde todas as telas
+  const telas = document.querySelectorAll(".tela");
+  telas.forEach(t => t.classList.remove("ativa"));
+
+  // mostra a tela selecionada
+  const tela = document.getElementById(id);
+  if (tela) {
+    tela.classList.add("ativa");
+  }
 }
