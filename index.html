@@ -10,18 +10,52 @@ title: Promove
 
   <ul class="menu">
 
+    <!-- ITEM PRINCIPAL -->
     <li class="menu-item">
-      <div class="menu-link" onclick="toggleSubmenu('tabelas')">
+      <div class="menu-link" onclick="toggleSubmenu('pontos')">
         Sistemas de Pontos
         <span class="arrow">▸</span>
       </div>
 
-      <ul class="submenu" id="submenu-tabelas">
-        <li onclick="mostrar('tabelas')">Gerais</li>
-        <li>Níveis Carreira</li>
-        <li>Requisito</li>
-      </ul>
-    </li>
+      <!-- SUBMENU 1 -->
+      <ul class="submenu" id="submenu-pontos">
+        <li onclick="mostrar('niveis-carreira')">
+          Níveis Carreira
+        </li>
+
+        <!-- SUBMENU 2 (Requisito) -->
+       
+        <li class="submenu-item">
+          <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+            Requisito
+            <span class="arrow">▸</span>
+          </div>
+
+          
+        <ul class="subsubmenu" id="subsubmenu-requisito">
+            <li onclick="mostrar('requisito-tempo')">Tempo</li>
+            <li onclick="mostrar('requisito-titulacao')">Titulação</li>
+            <li onclick="mostrar('requisito-aperfeicoamento')">Aperfeiçoamento</li>
+          </ul>
+        </li>
+
+<!-- SUBMENU 2 (Outros) -->
+    <li class="submenu-item">
+
+  <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+    Requisito
+    <span class="arrow">▸</span>
+  </div>
+
+  <ul class="subsubmenu" id="subsubmenu-requisito">
+    <li onclick="mostrar('requisito-tempo')">Tempo</li>
+    <li onclick="mostrar('requisito-titulacao')">Titulação</li>
+    <li onclick="mostrar('requisito-aperfeicoamento')">Aperfeiçoamento</li>
+  </ul>
+
+</li>
+
+    
 
     <li class="menu-item">
       <div class="menu-link" onclick="toggleSubmenu('processos')">
