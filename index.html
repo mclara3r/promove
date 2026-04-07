@@ -12,33 +12,39 @@ title: Promove
 
     <!-- ITEM PRINCIPAL -->
     <li class="menu-item">
-      <div class="menu-link" onclick="toggleSubmenu('pontos')">
-        Sistemas de Pontos
+      <div class="menu-link" onclick="toggleSubmenu('tabelas')">
+        Tabelas Básicas
         <span class="arrow">▸</span>
       </div>
 
-      <!-- SUBMENU 1 -->
-      <ul class="submenu" id="submenu-pontos">
-        <li onclick="mostrar('niveis-carreira')">
-          Níveis Carreira
-        </li>
+      <!-- SUBMENU -->
+    <ul class="submenu" id="submenu-pontos">
+          <li onclick="mostrar('submenu-pontos')">
+            Sistemas de Pontos
+          </li>
 
-        <!-- SUBMENU 2 (Requisito) -->
+        <!-- SUBMENU ITEM -->
        
-        <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
-            Requisito
-            <span class="arrow">▸</span>
-          </div>
-
+          <li class="submenu-item">
+            <div class="submenu-link" onclick="toggleSubSubmenu('niveis')">
+              Niveis Carreira
+              <span class="arrow">▸</span>
+            </div>
+            <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+              Requisitos
+              <span class="arrow">▸</span>
           
-        <ul class="subsubmenu" id="subsubmenu-requisito">
-            <li onclick="mostrar('requisito-tempo')">Tempo</li>
-            <li onclick="mostrar('requisito-titulacao')">Titulação</li>
-            <li onclick="mostrar('requisito-aperfeicoamento')">Aperfeiçoamento</li>
-          </ul>
-        </li>
-
+                <ul class="subsubmenu" id="subsubmenu-requisito">
+                    <li onclick="mostrar('requisito-tempo')">Tempo de Efetivo Exercício no Nível</li>
+                    <li onclick="mostrar('requisito-titulacao')">Desemepenho no Exercício das Atribuições</li>
+                    <li onclick="mostrar('requisito-aperfeicoamento')">Aperfeiçoamento</li>
+                    <li onclick="mostrar('requisito-responsabilidades')">Assunção de Responsabilidades</li>
+                    <li onclick="mostrar('requisito-titulacao')">Titulação Acadêmica</li>
+                    <li onclick="mostrar('requisito-qualificacao')">Titulação e Qualificação Acadêmica </li>
+                  </ul>
+            </div>
+         </li>
+  
 <!-- SUBMENU 2 (Outros) -->
     
     <li class="menu-item">
