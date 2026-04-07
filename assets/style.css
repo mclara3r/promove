@@ -70,3 +70,18 @@ a {
   color: #2563eb;
   text-decoration: none;
 }
+
+/* Remove limitação de largura do tema */
+.main-content,
+.page-content {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Faz o layout ocupar a tela toda */
+.app {
+  width: 100vw;
+  min-height: 100vh;
+}
+
