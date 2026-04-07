@@ -89,3 +89,13 @@ a {
   padding: 12px 20px !important;
 }
 
+/* Some com o subtítulo */
+.page-header p {
+  display: none;
+}
+
+/* Some com o botão */
+.page-header .btn {
+  display: none;
+}
+
