@@ -19,9 +19,16 @@ title: Promove
 
         <ul class="submenu" id="submenu-tabelas">
 
-          <li onclick="mostrar('sistemas-pontos')">
-            Sistemas de Pontos
-          </li>
+          <li class="submenu-item">
+            <div class="submenu-link" onclick="toggleSubSubmenu('sistemas')">
+              Sistemas de Pontos
+              <span class="arrow">▸</span>
+            </div>
+
+            <ul class="subsubmenu" id="subsubmenu-sistemas">
+              <li onclick="mostrar('niveis-carreira')">
+                Níveis Carreira
+              </li>
 
           <!-- REQUISITOS -->
           <li class="submenu-item">
