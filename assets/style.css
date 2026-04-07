@@ -1,45 +1,171 @@
+/* =====================
+   BASE
+===================== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f4f6f8;
 }
 
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+
+/* =====================
+   LAYOUT PRINCIPAL
+===================== */
 .app {
   display: flex;
-  height: 100vh;
+  width: 100vw;
+  min-height: 100vh;
 }
 
+
+/* =====================
+   SIDEBAR
+===================== */
 .sidebar {
-  width: 240px;
+  width: 300px;
+  min-width: 300px;
+  height: 100vh;
+  overflow-y: auto;
+
   background: #1f2933;
-  color: #fff;
-  padding: 20px;
+  color: #e5e7eb;
+
+  padding: 16px 0;
+  box-sizing: border-box;
 }
 
-.sidebar h2 {
-  font-size: 16px;
-  margin-bottom: 15px;
+/* Título da sidebar */
+.menu-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 16px 16px;
+  color: #9ca3af;
 }
 
-.sidebar ul {
+/* Lista principal */
+.menu {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.sidebar li {
-  padding: 10px;
+/* Item principal */
+.menu-item {
+  font-size: 14px;
+}
+
+.menu-link {
+  padding: 10px 16px;
   cursor: pointer;
-  border-radius: 4px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  white-space: normal;
+  word-break: break-word;
 }
 
-.sidebar li:hover {
+.menu-link:hover {
   background: #374151;
 }
 
+/* Setinha */
+.arrow {
+  transition: transform 0.2s;
+}
+
+/* =====================
+   SUBMENU (1º nível)
+===================== */
+.submenu {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.submenu li {
+  padding: 8px 32px;
+  background: #111827;
+  cursor: pointer;
+  font-size: 13px;
+
+  white-space: normal;
+  word-break: break-word;
+}
+
+.submenu li:hover {
+  background: #1f2933;
+}
+
+.submenu.aberto {
+  display: block;
+}
+
+/* =====================
+   SUBMENU (2º nível)
+===================== */
+.submenu-item {}
+
+.submenu-link {
+  padding: 8px 32px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #020617;
+  font-size: 13px;
+}
+
+.submenu-link:hover {
+  background: #0f172a;
+}
+
+.subsubmenu {
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.subsubmenu li {
+  padding: 8px 48px;
+  background: #020617;
+  cursor: pointer;
+  font-size: 12px;
+
+  white-space: normal;
+  word-break: break-word;
+}
+
+.subsubmenu li:hover {
+  background: #0f172a;
+}
+
+.subsubmenu.aberto {
+  display: block;
+}
+
+/* Setinha rotacionada quando aberto */
+.menu-link.aberto .arrow,
+.submenu-link.aberto .arrow {
+  transform: rotate(90deg);
+}
+
+
+/* =====================
+   CONTEÚDO CENTRAL
+===================== */
 .content {
   flex: 1;
-  padding: 20px;
-  background: #fff;
+  padding: 24px;
+  background: #ffffff;
 }
 
 .tela {
@@ -50,6 +176,10 @@ body {
   display: block;
 }
 
+
+/* =====================
+   TABELAS
+===================== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -66,12 +196,12 @@ td {
   border-bottom: 1px solid #e0e0e0;
 }
 
-a {
-  color: #2563eb;
-  text-decoration: none;
-}
 
-/* Remove limitação de largura do tema */
+/* =====================
+   OVERRIDE DO TEMA JEKYLL
+===================== */
+
+/* Remove limite de largura do tema */
 .main-content,
 .page-content {
   max-width: none !important;
@@ -79,12 +209,7 @@ a {
   padding: 0 !important;
 }
 
-/* Faz o layout ocupar a tela toda */
-.app {
-  width: 100vw;
-  min-height: 100vh;
-}
-
+/* Header do tema (topo) */
 .page-header {
   padding: 8px 16px !important;
 }
@@ -94,84 +219,9 @@ a {
   margin-bottom: 0 !important;
 }
 
-.page-header p {
-  display: none;
-}
-
-
-/* Some com o subtítulo */
-.page-header p {
-  display: none;
-}
-
-/* Some com o botão */
+/* Remove subtítulo e botão */
+.page-header p,
 .page-header .btn {
   display: none;
 }
-
-.sidebar {
-  width: 240px;
-  background: #1f2933;
-  color: #e5e7eb;
-  padding: 16px 0;
-}
-
-.menu-title {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 0 16px 16px;
-  color: #9ca3af;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-item {
-  font-size: 14px;
-}
-
-.menu-link {
-  padding: 10px 16px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-link:hover {
-  background: #374151;
-}
-
-.arrow {
-  transition: transform 0.2s;
-}
-
-/* Submenu */
-.submenu {
-  list-style: none;
-  padding-left: 0;
-  display: none;
-}
-
-.submenu li {
-  padding: 8px 32px;
-  background: #111827;
-  cursor: pointer;
-  font-size: 13px;
-}
-
-.submenu li:hover {
-  background: #1f2933;
-}
-
-/* Submenu aberto */
-.submenu.aberto {
-  display: block;
-}
-
-.menu-link.aberto .arrow {
-  transform: rotate(90deg);
-}
+``
