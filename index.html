@@ -5,14 +5,46 @@ title: Promove
 
 <div class="app">
   <!-- MENU LATERAL -->
-  <aside class="sidebar">
-    <h2>Tabelas Básicas</h2>
-    <ul>
-      <li onclick="mostrar('tabelas')">Sistemas de Pontos</li>
-      <li onclick="mostrar('processos')">Processos</li>
-      <li onclick="mostrar('pessoas')">Pessoas</li>
-    </ul>
-  </aside>
+<aside class="sidebar">
+  <h2 class="menu-title">Promove</h2>
+
+  <ul class="menu">
+
+    <li class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('tabelas')">
+        Tabelas Básicas
+        <span class="arrow">▸</span>
+      </div>
+
+      <ul class="submenu" id="submenu-tabelas">
+        <li onclick="mostrar('tabelas')">Gerais</li>
+        <li>Características</li>
+        <li>Instrução</li>
+        <li>Documentos</li>
+      </ul>
+    </li>
+
+    <li class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('processos')">
+        Processos
+        <span class="arrow">▸</span>
+      </div>
+
+      <ul class="submenu" id="submenu-processos">
+        <li>Abertura</li>
+        <li>Tramitação</li>
+      </ul>
+    </li>
+
+    <li class="menu-item">
+      <div class="menu-link" onclick="mostrar('pessoas')">
+        Pessoas
+      </div>
+    </li>
+
+  </ul>
+</aside>
+
 
   <!-- CONTEÚDO CENTRAL -->
   <main class="content">
