@@ -85,3 +85,7 @@ a {
   min-height: 100vh;
 }
 
+.page-header {
+  padding: 12px 20px !important;
+}
+
