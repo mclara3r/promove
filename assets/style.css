@@ -60,7 +60,7 @@ a {
 }
 
 .menu-link {
-  padding: 10px 16px;
+  padding: 10px 12px;
   cursor: pointer;
 
   display: flex;
@@ -96,7 +96,7 @@ a {
   font-size: 13px;
 
   white-space: normal;
-  word-break: break-word;
+  word-break: keep-all;
 }
 
 .submenu li:hover {
@@ -113,7 +113,7 @@ a {
 .submenu-item {}
 
 .submenu-link {
-  padding: 8px 32px;
+  padding: 8px 12px;
   cursor: pointer;
 
   display: flex;
@@ -141,7 +141,7 @@ a {
   font-size: 12px;
 
   white-space: normal;
-  word-break: break-word;
+  word-break: keep-all;
 }
 
 .subsubmenu li:hover {
