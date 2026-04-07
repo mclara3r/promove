@@ -6,69 +6,69 @@ title: Promove
 <div class="app">
   <!-- MENU LATERAL -->
   <aside class="sidebar">
-    <h2 class="menu-title">Promove</h2>
+  <h2 class="menu-title">Promove</h2>
 
-    <ul class="menu">
+  <ul class="menu">
 
-      <!-- TABELAS BÁSICAS -->
-      <li class="menu-item">
-        <div class="menu-link" onclick="toggleSubmenu('tabelas')">
-          Tabelas Básicas
-          <span class="arrow">▸</span>
-        </div>
-          <ul class="submenu" id="submenu-tabelas">
-          
+    <!-- TABELAS BÁSICAS -->
+    <li class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('tabelas')">
+        Tabelas Básicas
+        <span class="arrow">▸</span>
+      </div>
+
+      <ul class="submenu" id="submenu-tabelas">
+
+        <!-- SISTEMAS DE PONTOS -->
+        <li class="submenu-item">
+          <div class="submenu-link" onclick="toggleSubSubmenu('sistemas')">
+            Sistemas de Pontos
+            <span class="arrow">▸</span>
+          </div>
+
+          <ul class="subsubmenu" id="subsubmenu-sistemas">
+
+            <!-- NÍVEIS CARREIRA -->
+            <li onclick="mostrar('niveis-carreira')">
+              Níveis Carreira
+            </li>
+
+            <!-- REQUISITOS -->
             <li class="submenu-item">
-              <div class="submenu-link" onclick="toggleSubSubmenu('sistemas')">
-                Sistemas de Pontos
+              <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+                Requisitos
                 <span class="arrow">▸</span>
               </div>
-          
-              <ul class="subsubmenu" id="subsubmenu-sistemas">
-          
-                <!-- NÍVEIS CARREIRA -->
-                <li onclick="mostrar('niveis-carreira')">
-                  Níveis Carreira
+
+              <ul class="subsubmenu" id="subsubmenu-requisito">
+                <li onclick="mostrar('requisito-tempo')">
+                  Tempo de Efetivo Exercício no Nível
                 </li>
-          
-                <!-- REQUISITOS (irmão de Níveis Carreira) -->
-                <li class="submenu-item">
-                  <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
-                    Requisitos
-                    <span class="arrow">▸</span>
-                  </div>
-          
-                  <ul class="subsubmenu" id="subsubmenu-requisito">
-                    <li onclick="mostrar('requisito-tempo')">
-                      Tempo de Efetivo Exercício no Nível
-                    </li>
-                    <li onclick="mostrar('requisito-desempenho')">
-                      Desempenho no Exercício das Atribuições
-                    </li>
-                    <li onclick="mostrar('requisito-aperfeicoamento')">
-                      Aperfeiçoamento
-                    </li>
-                    <li onclick="mostrar('requisito-responsabilidades')">
-                      Assunção de Responsabilidades
-                    </li>
-                    <li onclick="mostrar('requisito-titulacao')">
-                      Titulação Acadêmica
-                    </li>
-                    <li onclick="mostrar('requisito-qualificacao')">
-                      Titulação e Qualificação Acadêmica
-                    </li>
-                  </ul>
-          
+                <li onclick="mostrar('requisito-desempenho')">
+                  Desempenho no Exercício das Atribuições
                 </li>
-          
+                <li onclick="mostrar('requisito-aperfeicoamento')">
+                  Aperfeiçoamento
+                </li>
+                <li onclick="mostrar('requisito-responsabilidades')">
+                  Assunção de Responsabilidades
+                </li>
+                <li onclick="mostrar('requisito-titulacao')">
+                  Titulação Acadêmica
+                </li>
+                <li onclick="mostrar('requisito-qualificacao')">
+                  Titulação e Qualificação Acadêmica
+                </li>
               </ul>
-          </li>
+            </li>
+
+          </ul>
+        </li>
 
       </ul>
-
     </li>
 
-</ul>
+  </ul>
 </aside>
 
   <!-- CONTEÚDO CENTRAL -->
