@@ -109,3 +109,69 @@ a {
   display: none;
 }
 
+.sidebar {
+  width: 240px;
+  background: #1f2933;
+  color: #e5e7eb;
+  padding: 16px 0;
+}
+
+.menu-title {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 16px 16px;
+  color: #9ca3af;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  font-size: 14px;
+}
+
+.menu-link {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-link:hover {
+  background: #374151;
+}
+
+.arrow {
+  transition: transform 0.2s;
+}
+
+/* Submenu */
+.submenu {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+}
+
+.submenu li {
+  padding: 8px 32px;
+  background: #111827;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.submenu li:hover {
+  background: #1f2933;
+}
+
+/* Submenu aberto */
+.submenu.aberto {
+  display: block;
+}
+
+.menu-link.aberto .arrow {
+  transform: rotate(90deg);
+}
