@@ -5,104 +5,119 @@ title: Promove
 
 <div class="app">
   <!-- MENU LATERAL -->
-<aside class="sidebar">
-  <h2 class="menu-title">Promove</h2>
+  <aside class="sidebar">
+    <h2 class="menu-title">Promove</h2>
 
-  <ul class="menu">
+    <ul class="menu">
 
-    <!-- TABELAS BÁSICAS -->
-    <li class="menu-item">
-      <div class="menu-link" onclick="toggleSubmenu('tabelas')">
-        Tabelas Básicas
-        <span class="arrow">▸</span>
-      </div>
+      <!-- TABELAS BÁSICAS -->
+      <li class="menu-item">
+        <div class="menu-link" onclick="toggleSubmenu('tabelas')">
+          Tabelas Básicas
+          <span class="arrow">▸</span>
+        </div>
 
-      <ul class="submenu" id="submenu-tabelas">
+        <ul class="submenu" id="submenu-tabelas">
 
-        <li onclick="mostrar('sistemas-pontos')">
-          Sistemas de Pontos
-        </li>
+          <li onclick="mostrar('sistemas-pontos')">
+            Sistemas de Pontos
+          </li>
 
-        <!-- REQUISITOS -->
-        <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
-            Requisitos
-            <span class="arrow">▸</span>
-          </div>
+          <!-- REQUISITOS -->
+          <li class="submenu-item">
+            <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+              Requisitos
+              <span class="arrow">▸</span>
+            </div>
 
-          <ul class="subsubmenu" id="subsubmenu-requisito">
-            <li onclick="mostrar('requisito-tempo')">
-              Tempo de Efetivo Exercício no Nível
-            </li>
-            <li onclick="mostrar('requisito-desempenho')">
-              Desempenho no Exercício das Atribuições
-            </li>
-            <li onclick="mostrar('requisito-aperfeicoamento')">
-              Aperfeiçoamento
-            </li>
-            <li onclick="mostrar('requisito-responsabilidades')">
-              Assunção de Responsabilidades
-            </li>
-            <li onclick="mostrar('requisito-titulacao')">
-              Titulação Acadêmica
-            </li>
-            <li onclick="mostrar('requisito-qualificacao')">
-              Titulação e Qualificação Acadêmica
-            </li>
-          </ul>
-        </li>
+            <ul class="subsubmenu" id="subsubmenu-requisito">
+              <li onclick="mostrar('requisito-tempo')">
+                Tempo de Efetivo Exercício no Nível
+              </li>
+              <li onclick="mostrar('requisito-desempenho')">
+                Desempenho no Exercício das Atribuições
+              </li>
+              <li onclick="mostrar('requisito-aperfeicoamento')">
+                Aperfeiçoamento
+              </li>
+              <li onclick="mostrar('requisito-responsabilidades')">
+                Assunção de Responsabilidades
+              </li>
+              <li onclick="mostrar('requisito-titulacao')">
+                Titulação Acadêmica
+              </li>
+              <li onclick="mostrar('requisito-qualificacao')">
+                Titulação e Qualificação Acadêmica
+              </li>
+            </ul>
+          </li>
 
-      </ul>
-    </li>
+        </ul>
+      </li>
 
-  </ul>
-</aside>
-
+    </ul>
+  </aside>
 
   <!-- CONTEÚDO CENTRAL -->
   <main class="content">
 
-    <!-- TELA: TABELAS -->
     <section id="tabelas" class="tela ativa">
       <h1>Tabelas Básicas</h1>
-
-      <table>
-        <tr>
-          <th>Categoria</th>
-          <th>Opções</th>
-        </tr>
-        <tr>
-          <td>Características</td>
-          <td>
-            <a href="#">Cores dos Olhos</a> |
-            <a href="#">Tipos Sanguíneos</a>
-          </td>
-        </tr>
-        <tr>
-          <td>Instrução</td>
-          <td>
-            <a href="#">Escolaridades</a> |
-            <a href="#">Titulação Acadêmica</a>
-          </td>
-        </tr>
-      </table>
+      <p>Conteúdo inicial.</p>
     </section>
 
-    <!-- TELA: PROCESSOS -->
-    <section id="processos" class="tela">
-      <h1>Processos</h1>
-      <p>Conteúdo de processos administrativos.</p>
+    <section id="sistemas-pontos" class="tela">
+      <h1>Sistemas de Pontos</h1>
+      <p>Conteúdo sobre sistemas de pontos.</p>
     </section>
 
-    <!-- TELA: PESSOAS -->
-    <section id="pessoas" class="tela">
-      <h1>Pessoas</h1>
-      <p>Conteúdo de pessoas.</p>
+    <section id="requisito-tempo" class="tela">
+      <h1>Tempo de Efetivo Exercício no Nível</h1>
+    </section>
+
+    <section id="requisito-desempenho" class="tela">
+      <h1>Desempenho no Exercício das Atribuições</h1>
+    </section>
+
+    <section id="requisito-aperfeicoamento" class="tela">
+      <h1>Aperfeiçoamento</h1>
+    </section>
+
+    <section id="requisito-responsabilidades" class="tela">
+      <h1>Assunção de Responsabilidades</h1>
+    </section>
+
+    <section id="requisito-titulacao" class="tela">
+      <h1>Titulação Acadêmica</h1>
+    </section>
+
+    <section id="requisito-qualificacao" class="tela">
+      <h1>Titulação e Qualificação Acadêmica</h1>
     </section>
 
   </main>
 </div>
 
 <link rel="stylesheet" href="assets/style.css">
-<script src="assets/script.js"></script>
-``
+
+<script>
+function toggleSubmenu(id) {
+  const submenu = document.getElementById("submenu-" + id);
+  submenu.classList.toggle("aberto");
+}
+
+function toggleSubSubmenu(id) {
+  const subsubmenu = document.getElementById("subsubmenu-" + id);
+  subsubmenu.classList.toggle("aberto");
+}
+
+function mostrar(id) {
+  const telas = document.querySelectorAll(".tela");
+  telas.forEach(t => t.classList.remove("ativa"));
+
+  const tela = document.getElementById(id);
+  if (tela) {
+    tela.classList.add("ativa");
+  }
+}
+</script>
