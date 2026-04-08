@@ -92,7 +92,7 @@ a {
 .submenu > li {
   padding: 0;
   background: #111827;
-  font-size: 13px;
+  font-size: 12px;
 
   white-space: normal;
   word-break: keep-all;
@@ -112,7 +112,7 @@ a {
 .submenu-item { padding: 0;}
 
 .submenu-link {
-  padding: 8px 32px;
+  padding: 8px 24px;
   cursor: pointer;
 
   display: flex;
@@ -120,7 +120,7 @@ a {
   align-items: center;
 
   background: #020617;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 .submenu-link:hover {
