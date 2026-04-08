@@ -37,28 +37,28 @@ title: Promove
 
             <!-- REQUISITOS -->
             <li class="submenu-item">
-              <div class="submenu-link" onclick="toggleSubSubmenu('requisito')">
+              <div class="submenu-link" onclick="toggleSubSubmenu('tabela')">
                 Requisitos
                 <span class="arrow">▸</span>
               </div>
 
               <ul class="subsubmenu" id="subsubmenu-requisito">
-                <li onclick="mostrar('requisito-tempo')">
+                <li onclick="mostrar('tabela-tee')">
                   Tempo de Efetivo Exercício no Nível
                 </li>
-                <li onclick="mostrar('requisito-desempenho')">
+                <li onclick="mostrar('tabela-desempenho')">
                   Desempenho no Exercício das Atribuições
                 </li>
-                <li onclick="mostrar('requisito-aperfeicoamento')">
+                <li onclick="mostrar('tabela-aperfeicoamento')">
                   Aperfeiçoamento
                 </li>
-                <li onclick="mostrar('requisito-responsabilidades')">
+                <li onclick="mostrar('tabela-responsabilidades')">
                   Assunção de Responsabilidades
                 </li>
-                <li onclick="mostrar('requisito-titulacao')">
+                <li onclick="mostrar('tabela-titulacao')">
                   Titulação Acadêmica
                 </li>
-                <li onclick="mostrar('requisito-qualificacao')">
+                <li onclick="mostrar('tabela-qualificacao')">
                   Titulação e Qualificação Acadêmica
                 </li>
               </ul>
@@ -107,7 +107,7 @@ title: Promove
           </div>
         </li>
         <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('servidores-titulacao-ueg')">
+          <div class="submenu-link" onclick="toggleSubSubmenu('servidores-qualificacao')">
             Titulação e qualificação acadêmica
           </div>
         </li>
@@ -146,7 +146,7 @@ title: Promove
           </div>
         </li>
         <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('chefia-titulacao-ueg')">
+          <div class="submenu-link" onclick="toggleSubSubmenu('chefia-qualificacao')">
             Titulação e qualificação acadêmica
           </div>
         </li>      
@@ -184,7 +184,7 @@ title: Promove
           </div>
         </li>
         <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('comissao-titulacao-ueg')">
+          <div class="submenu-link" onclick="toggleSubSubmenu('comissao-qualificacao')">
             Titulação e qualificação acadêmica
           </div>
         </li>
@@ -209,23 +209,24 @@ title: Promove
       <p>Conteúdo sobre sistemas de pontos.</p>
     </section>
 
-    <section id="requisito-tempo" class="tela">
+    
+  <!-- TABELAS BÁSICAS -->
+    <section id="tabela-tee" class="tela">
       <h1>Tempo de Efetivo Exercício no Nível</h1>
        <ul class="lista-links">
             <li><a href="pagina1.html">Licenças Afastamentos (RN001 – Efetivo Exercício no Nível)</a></li>
-
         </ul>
     </section>
 
-    <section id="requisito-desempenho" class="tela">
+    <section id="tabela-desempenho" class="tela">
       <h1>Desempenho no Exercício das Atribuições</h1>
     </section>
 
-    <section id="requisito-aperfeicoamento" class="tela">
+    <section id="tabela-aperfeicoamento" class="tela">
       <h1>Aperfeiçoamento</h1>
     </section>
 
-    <section id="requisito-responsabilidades" class="tela">
+    <section id="tabela-responsabilidades" class="tela">
       <h1>Assunção de Responsabilidades</h1>
         <ul class="lista-links">
             <li><a href="pagina1.html">Exercício de função designada (RN002 – Função Designada)</a></li>
@@ -235,20 +236,128 @@ title: Promove
             <li><a href="pagina5.html">Publicação de artigos, livros ou pesquisas científicos</a></li>
             <li><a href="pagina6.html">Aprovação de artigos ou pesquisas científicos em eventos</a></li>
             <li><a href="pagina7.html">Desenvolvimento de estágio pós-doutoral no órgão</a></li>
-        </ul>
-      
+        </ul>     
     </section>
 
-    <section id="requisito-titulacao" class="tela">
+    <section id="tabela-qualificacao" class="tela">
       <h1>Titulação Acadêmica</h1>
             <ul class="lista-links">
                 <li><a href="pagina1.html">Tipos</a></li>
             </ul>
     </section>
 
-    <section id="requisito-qualificacao" class="tela">
+    <section id="tabela-qualificacao" class="tela">
       <h1>Titulação e Qualificação Acadêmica</h1>
     </section>
+
+
+    <!-- SERVIDOR -->
+
+    <section id="servidores-tee" class="tela">
+      <h1>Tempo de Efetivo Exercício no Nível</h1>
+       <ul class="lista-links">
+            <li><a href="pagina1.html">Tempo de Efetivo Exercício no Nível</a></li>
+        </ul>
+    </section>
+
+    <section id="servidores-desempenho" class="tela">
+      <h1>Desempenho no Exercício das Atribuições</h1>
+    </section>
+
+    <section id="servidores-aperfeicoamento" class="tela">
+      <h1>Aperfeiçoamento</h1>
+    </section>
+
+    <section id="servidores-responsabilidades" class="tela">
+      <h1>Assunção de Responsabilidades</h1>
+        <ul class="lista-links">
+            <li><a href="pagina1.html">Assunção de Responsabilidades</a></li>
+
+        </ul>     
+    </section>
+
+    <section id="servidores-titulacao" class="tela">
+      <h1>Titulação Acadêmica</h1>
+            <ul class="lista-links">
+                <li><a href="pagina1.html">Titulação Acadêmica</a></li>
+            </ul>
+    </section>
+
+    <section id="servidores-qualificacao" class="tela">
+      <h1>Titulação e Qualificação Acadêmica</h1>
+    </section>
+
+    <!-- CHEFIA -->
+
+        <section id="chefia-tee" class="tela">
+      <h1>Tempo de Efetivo Exercício no Nível</h1>
+       <ul class="lista-links">
+            <li><a href="pagina1.html">Tempo de Efetivo Exercício no Nível</a></li>
+        </ul>
+    </section>
+
+    <section id="chefia-desempenho" class="tela">
+      <h1>Desempenho no Exercício das Atribuições</h1>
+    </section>
+
+    <section id="chefia-aperfeicoamento" class="tela">
+      <h1>Aperfeiçoamento</h1>
+    </section>
+
+    <section id="chefia-responsabilidades" class="tela">
+      <h1>Assunção de Responsabilidades</h1>
+        <ul class="lista-links">
+            <li><a href="pagina1.html">Assunção de Responsabilidades</a></li>
+
+        </ul>     
+    </section>
+
+    <section id="chefia-titulacao" class="tela">
+      <h1>Titulação Acadêmica</h1>
+            <ul class="lista-links">
+                <li><a href="pagina1.html">Titulação Acadêmica</a></li>
+            </ul>
+    </section>
+
+    <section id="chefia-qualificacao" class="tela">
+      <h1>Titulação e Qualificação Acadêmica</h1>
+    </section>
+    
+    <!-- COMISSÃO -->
+    <section id="comissao-tee" class="tela">
+      <h1>Tempo de Efetivo Exercício no Nível</h1>
+       <ul class="lista-links">
+            <li><a href="pagina1.html">Tempo de Efetivo Exercício no Nível</a></li>
+        </ul>
+    </section>
+
+    <section id="comissao-desempenho" class="tela">
+      <h1>Desempenho no Exercício das Atribuições</h1>
+    </section>
+
+    <section id="comissao-aperfeicoamento" class="tela">
+      <h1>Aperfeiçoamento</h1>
+    </section>
+
+    <section id="comissao-responsabilidades" class="tela">
+      <h1>Assunção de Responsabilidades</h1>
+        <ul class="lista-links">
+            <li><a href="pagina1.html">Assunção de Responsabilidades</a></li>
+
+        </ul>     
+    </section>
+
+    <section id="comissao-titulacao" class="tela">
+      <h1>Titulação Acadêmica</h1>
+            <ul class="lista-links">
+                <li><a href="pagina1.html">Titulação Acadêmica</a></li>
+            </ul>
+    </section>
+
+    <section id="comissao-qualificacao" class="tela">
+      <h1>Titulação e Qualificação Acadêmica</h1>
+    </section>
+    
 
   </main>
 </div>
