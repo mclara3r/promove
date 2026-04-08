@@ -21,7 +21,7 @@ title: Promove
 
         <!-- SISTEMAS DE PONTOS -->
         <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubSubmenu('sistemas'); mostrar('sistemas')">
+          <div class="submenu-link" onclick="toggleSubmenu('sistemas'); mostrar('sistemas')">
             Sistemas de Pontos
             <span class="arrow">▸</span>
           </div>
@@ -367,8 +367,9 @@ title: Promove
 
   
 function toggleSubmenu(id) {
-  const todosSubmenus = document.querySelectorAll('[id^="submenu-"]');
-  const submenuAtual = document.getElementById("submenu-" + id);
+  const todosSubmenus = document.querySelectorAll('[id^="submenu-"], [id^="subsubmenu-"]');
+  const submenuAtual = document.getElementById("submenu-" + id) 
+                    || document.getElementById("subsubmenu-" + id);
 
   todosSubmenus.forEach(sm => {
     if (sm !== submenuAtual) {
@@ -376,32 +377,36 @@ function toggleSubmenu(id) {
     }
   });
 
-  submenuAtual.classList.toggle("aberto");
+  if (submenuAtual) {
+    submenuAtual.classList.toggle("aberto");
+  }
 }
 
-
-  
 function toggleSubSubmenu(event, id) {
-  event.stopPropagation(); // 🔴 ESSENCIAL
+  event.stopPropagation(); // ✅ só aqui
 
   const todosSubSubmenus = document.querySelectorAll('[id^="subsubmenu-"]');
-  const subsubmenuAtual = document.getElementById("subsubmenu-" + id);
+  const atual = document.getElementById("subsubmenu-" + id);
 
   todosSubSubmenus.forEach(ssm => {
-    if (ssm !== subsubmenuAtual) {
+    if (ssm !== atual) {
       ssm.classList.remove("aberto");
     }
   });
 
-  subsubmenuAtual.classList.toggle("aberto");
+  if (atual) {
+    atual.classList.toggle("aberto");
+  }
 }
 
-
-
-
 function mostrar(id) {
-  const telas = document.querySelectorAll(".tela");
-  telas.forEach(t => t.classList.remove("ativa"));
+  document.querySelectorAll(".tela")
+    .forEach(t => t.classList.remove("ativa"));
+
+  const tela = document.getElementById(id);
+  if (tela) tela.classList.add("ativa");
+}
+
 
   const tela = document.getElementById(id);
   if (tela) {
