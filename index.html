@@ -37,7 +37,7 @@ title: Promove
 
             <!-- REQUISITOS -->
             <li class="submenu-item">
-              <div class="submenu-link" onclick="toggleSubSubmenu('tabela'); mostrar('tabela')">
+              <div class="submenu-link" onclick="toggleSubSubmenu(event, 'tabela'); mostrar('tabela')">
                 Requisitos
                 <span class="arrow">▸</span>
               </div>
@@ -364,6 +364,8 @@ title: Promove
 <link rel="stylesheet" href="assets/style.css">
 
 <script>
+
+  
 function toggleSubmenu(id) {
   const todosSubmenus = document.querySelectorAll('[id^="submenu-"]');
   const submenuAtual = document.getElementById("submenu-" + id);
@@ -377,7 +379,11 @@ function toggleSubmenu(id) {
   submenuAtual.classList.toggle("aberto");
 }
 
-function toggleSubSubmenu(id) {
+
+  
+function toggleSubSubmenu(event, id) {
+  event.stopPropagation(); // 🔴 ESSENCIAL
+
   const todosSubSubmenus = document.querySelectorAll('[id^="subsubmenu-"]');
   const subsubmenuAtual = document.getElementById("subsubmenu-" + id);
 
@@ -389,6 +395,7 @@ function toggleSubSubmenu(id) {
 
   subsubmenuAtual.classList.toggle("aberto");
 }
+
 
 
 
