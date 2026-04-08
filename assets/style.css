@@ -90,9 +90,8 @@ a {
 }
 
 .submenu > li {
-  padding: 8px 32px;
+  padding: 0;
   background: #111827;
-  cursor: pointer;
   font-size: 13px;
 
   white-space: normal;
@@ -113,7 +112,7 @@ a {
 .submenu-item { padding: 0;}
 
 .submenu-link {
-  padding: 8px 12px;
+  padding: 8px 32px;
   cursor: pointer;
 
   display: flex;
@@ -156,6 +155,11 @@ a {
 .menu-link.aberto .arrow,
 .submenu-link.aberto .arrow {
   transform: rotate(90deg);
+}
+
+.submenu-item > .submenu-link {
+  position: relative;
+  z-index: 1;
 }
 
 
