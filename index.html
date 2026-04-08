@@ -389,20 +389,11 @@ function toggleSubSubmenu(event, id) {
   atual.classList.toggle('aberto');
 }
 
-  
 function mostrar(id) {
   const telas = document.querySelectorAll('.tela');
   telas.forEach(t => t.classList.remove('ativa'));
 
   const tela = document.getElementById(id);
   if (tela) tela.classList.add('ativa');
-}
-
-
-
-  const tela = document.getElementById(id);
-  if (tela) {
-    tela.classList.add("ativa");
-  }
 }
 </script>
