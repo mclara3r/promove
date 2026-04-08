@@ -89,7 +89,7 @@ a {
   display: none;
 }
 
-.submenu li {
+.submenu > li {
   padding: 8px 32px;
   background: #111827;
   cursor: pointer;
@@ -99,7 +99,7 @@ a {
   word-break: keep-all;
 }
 
-.submenu li:hover {
+.submenu > li:hover {
   background: #1f2933;
 }
 
@@ -110,7 +110,7 @@ a {
 /* =====================
    SUBMENU (2º nível)
 ===================== */
-.submenu-item {}
+.submenu-item { padding: 0;}
 
 .submenu-link {
   padding: 8px 12px;
