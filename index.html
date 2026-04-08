@@ -367,14 +367,23 @@ title: Promove
 
 <script>
 function toggleSubmenu(id) {
-  const submenu = document.getElementById("submenu-" + id);
-  submenu.classList.toggle("aberto");
+  const todosSubmenus = document.querySelectorAll('[id^="submenu-"]');
+  const submenuAtual = document.getElementById("submenu-" + id);
+
+  todosSubmenus.forEach(sm => {
+    if (sm !== submenuAtual) {
+      sm.classList.remove("aberto");
+    }
+  });
+
+  submenuAtual.classList.toggle("aberto");
 }
 
 function toggleSubSubmenu(id) {
   const subsubmenu = document.getElementById("subsubmenu-" + id);
   subsubmenu.classList.toggle("aberto");
 }
+
 
 function mostrar(id) {
   const telas = document.querySelectorAll(".tela");
