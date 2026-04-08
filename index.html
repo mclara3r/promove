@@ -21,7 +21,7 @@ title: Promove
 
         <!-- SISTEMAS DE PONTOS -->
         <li class="submenu-item">
-          <div class="submenu-link" onclick="toggleSubmenu('sistemas'); mostrar('sistemas')">
+          <div class="submenu-link" onclick="toggleSubSubmenu(event, 'sistemas'); mostrar('sistemas')">
             Sistemas de Pontos
             <span class="arrow">▸</span>
           </div>
@@ -365,47 +365,39 @@ title: Promove
 
 <script>
 
-  
 function toggleSubmenu(id) {
-  const todosSubmenus = document.querySelectorAll('[id^="submenu-"], [id^="subsubmenu-"]');
-  const submenuAtual = document.getElementById("submenu-" + id) 
-                    || document.getElementById("subsubmenu-" + id);
+  const submenus = document.querySelectorAll('.submenu');
+  const atual = document.getElementById('submenu-' + id);
 
-  todosSubmenus.forEach(sm => {
-    if (sm !== submenuAtual) {
-      sm.classList.remove("aberto");
-    }
+  submenus.forEach(sm => {
+    if (sm !== atual) sm.classList.remove('aberto');
   });
 
-  if (submenuAtual) {
-    submenuAtual.classList.toggle("aberto");
-  }
+  atual.classList.toggle('aberto');
 }
 
 function toggleSubSubmenu(event, id) {
-  event.stopPropagation(); // ✅ só aqui
+  event.stopPropagation();
 
-  const todosSubSubmenus = document.querySelectorAll('[id^="subsubmenu-"]');
-  const atual = document.getElementById("subsubmenu-" + id);
+  const subsubmenus = document.querySelectorAll('.subsubmenu');
+  const atual = document.getElementById('subsubmenu-' + id);
 
-  todosSubSubmenus.forEach(ssm => {
-    if (ssm !== atual) {
-      ssm.classList.remove("aberto");
-    }
+  subsubmenus.forEach(ssm => {
+    if (ssm !== atual) ssm.classList.remove('aberto');
   });
 
-  if (atual) {
-    atual.classList.toggle("aberto");
-  }
+  atual.classList.toggle('aberto');
 }
 
+  
 function mostrar(id) {
-  document.querySelectorAll(".tela")
-    .forEach(t => t.classList.remove("ativa"));
+  const telas = document.querySelectorAll('.tela');
+  telas.forEach(t => t.classList.remove('ativa'));
 
   const tela = document.getElementById(id);
-  if (tela) tela.classList.add("ativa");
+  if (tela) tela.classList.add('ativa');
 }
+``
 
 
   const tela = document.getElementById(id);
