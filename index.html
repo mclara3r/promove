@@ -364,23 +364,45 @@ title: Promove
 <link rel="stylesheet" href="assets/style.css">
 
 <script>
+<script>
+function toggleSubmenu(id) {
+  const submenus = document.querySelectorAll('.submenu');
+  const atual = document.getElementById('submenu-' + id);
+
+  submenus.forEach(sm => {
+    if (sm !== atual) sm.classList.remove('aberto');
+  });
+
+  atual.classList.toggle('aberto');
+}
 
 function toggleSubSubmenu(event, id) {
   event.stopPropagation();
 
   const atual = document.getElementById('subsubmenu-' + id);
 
-  // pega apenas o container pai
-  const parent = atual.parentElement;
+  // pega o LI pai
+  const parentLi = atual.closest('li');
 
-  // fecha apenas irmãos
-  const siblings = parent.querySelectorAll(':scope > .subsubmenu');
+  // pega os irmãos (mesmo nível)
+  const siblings = parentLi.parentElement.children;
 
-  siblings.forEach(ssm => {
-    if (ssm !== atual) ssm.classList.remove('aberto');
-  });
+  for (let item of siblings) {
+    const submenu = item.querySelector(':scope > .subsubmenu');
+    if (submenu && submenu !== atual) {
+      submenu.classList.remove('aberto');
+    }
+  }
 
   atual.classList.toggle('aberto');
 }
-  
+
+function mostrar(id) {
+  const telas = document.querySelectorAll('.tela');
+  telas.forEach(t => t.classList.remove('ativa'));
+
+  const tela = document.getElementById(id);
+  if (tela) tela.classList.add('ativa');
+}
+</script>
 </script>
