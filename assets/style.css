@@ -241,11 +241,11 @@ td {
 
 /* Header do tema (topo) */
 .page-header {
-  padding: 8px 16px !important;
+  padding: 8px 8px !important;
 }
 
 .page-header h1 {
-  font-size: 72px !important;
+  font-size: 36px !important;
   margin-bottom: 0 !important;
 }
 
