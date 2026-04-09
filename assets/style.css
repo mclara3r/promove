@@ -250,6 +250,15 @@ td {
   margin: 0 !important;
   line-height: 1.1;
 }
+.page-header .wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.page-header h1 {
+  margin: 0 !important;
+  line-height: 1 !important;
+}
 
 
 /* Remove subtítulo e botão */
