@@ -162,6 +162,12 @@ a {
   z-index: 1;
 }
 
+/* nível 2 – Sistemas de Pontos */
+.submenu > li > .submenu-link {
+  padding-left: 28px; /* ajuste fino aqui */
+}
+
+
 
 /* =====================
    CONTEÚDO CENTRAL
