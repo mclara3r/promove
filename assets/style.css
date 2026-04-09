@@ -241,17 +241,16 @@ td {
 
 /* Header do tema (topo) */
 .page-header {
+  padding: 6px 8px !important;
   min-height: 0 !important;
 }
 
-
 .page-header h1 {
-  font-size: 24px !important;
-  margin-bottom: 0 !important;
+  font-size: 22px !important;
   margin: 0 !important;
   line-height: 1.1;
-
 }
+
 
 /* Remove subtítulo e botão */
 .page-header p,
