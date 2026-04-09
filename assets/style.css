@@ -167,10 +167,15 @@ a {
   padding-left: 28px; /* ajuste fino aqui */
 }
 
+
 /* nível 3 – Níveis Carreira / Requisitos */
 .subsubmenu > li > .submenu-link {
-  padding-left: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 40px;   /* mantém a hierarquia */
+  padding-right: 12px;
 }
+
 
 /* nível 4 – Tempo de Efetivo Exercício até Titulação e Qualificação */
 .subsubmenu > li > ul.subsubmenu > li {
