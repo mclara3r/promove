@@ -112,7 +112,7 @@ a {
 .submenu-item { padding: 0;}
 
 .submenu-link {
-  padding: 8px 12px;
+  padding: 8px 24px;
   cursor: pointer;
 
   display: flex;
@@ -134,7 +134,7 @@ a {
 }
 
 .subsubmenu li {
-  padding: 8px 48px;
+  padding: 8px 24px;
   background: #020617;
   cursor: pointer;
   font-size: 12px;
