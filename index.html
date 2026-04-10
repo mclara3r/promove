@@ -124,7 +124,11 @@ title: Promove
       <ul class="submenu" id="submenu-chefia">
 
         <!-- requisitos -->
-        
+        <li class="submenu-item">
+          <div class="submenu-link" onclick="mostrar('chefia_tee')">
+            Tempo de efetivo Exerício no nível
+          </div>
+        </li>
         <li class="submenu-item">
           <div class="submenu-link" onclick="mostrar('chefia_desempenho')">
             Desempenho no exercício das atribuições
@@ -164,6 +168,11 @@ title: Promove
 
         <!-- requisitos -->
         <li class="submenu-item">
+          <div class="submenu-link" onclick="mostrar('comissao_tee')">
+            Tempo de efetivo Exerício no nível
+          </div>
+        </li>
+        <li class="submenu-item">
           <div class="submenu-link" onclick=" mostrar('comissao_desempenho')">
             Desempenho no exercício das atribuições
           </div>
@@ -186,6 +195,59 @@ title: Promove
         <li class="submenu-item">
           <div class="submenu-link" onclick=" mostrar('comissao_qualificacao')">
             Titulação e qualificação acadêmica
+          </div>
+        </li>
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissao_efetivacao')">
+            Efetivação da Evolução Funcional
+          </div>
+        </li>
+      </ul>
+    </li>
+
+<!-- Comissão Central -->
+    <li class="menu-item">
+      <div class="menu-link" onclick="toggleSubmenu('comissaoC');  mostrar('comissaoC')">
+        Comissão Central de Evolução Funcional
+        <span class="arrow">▸</span>
+      </div>
+      
+      <ul class="submenu" id="submenu-comissaoC">
+
+        <!-- requisitos -->
+        <li class="submenu-item">
+          <div class="submenu-link" onclick="mostrar('comissaoC_tee')">
+            Tempo de efetivo Exerício no nível
+          </div>
+        </li>
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_desempenho')">
+            Desempenho no exercício das atribuições
+          </div>
+        </li>
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_aperfeicoamento')">
+            Aperfeiçoamento
+          </div>
+        </li> 
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_responsabilidades')">
+            Assunção de responsabilidades
+          </div>
+        </li> 
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_titulacao')">
+            Titulação acadêmica
+          </div>
+        </li>
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_qualificacao')">
+            Titulação e qualificação acadêmica
+          </div>
+        </li>
+        <li class="submenu-item">
+          <div class="submenu-link" onclick=" mostrar('comissaoC_efetivacao')">
+            Efetivação da Evolução Funcional
           </div>
         </li>
       </ul>
@@ -411,6 +473,13 @@ title: Promove
       <h1>Chefia</h1>
       <p>Conteúdo sobre Chefia</p>
     </section>
+    
+    <section id="chefia_tee" class="tela">
+      <h1>Chefia - Tempo de efetivo Exerício no nível</h1>
+        <ul class="lista-links">
+          <li><a href="pagina1.html">Acompanhar o Tempo de efetivo Exerício no nível dos servidores da lotação.</a></li>
+        </ul>
+    </section>    
 
     <section id="chefia_desempenho" class="tela">
       <h1>Chefia - Desempenho no Exercício das Atribuições</h1>
@@ -467,28 +536,35 @@ title: Promove
         </ul>
     </section>
     
-    <!-- COMISSÃO -->
+    <!-- COMISSÃO SETORIAL -->
     <section id="comissao" class="tela">
-      <h1>Comissão</h1>
-      <p>Conteúdo sobre Comissão</p>
+      <h1>Comissão Setorial de Evolução Funcional</h1>
+      <p>Conteúdo sobre Comissão Setorial de Evolução Funcional</p>
     </section>
 
+    <section id="comissao_tee" class="tela">
+      <h1>Comissão Setorial de Evolução Funcional - Tempo de efetivo Exerício no nível</h1>
+        <ul class="lista-links">
+          <li><a href="pagina1.html">Acompanhar o Tempo de efetivo Exerício no nível dos servidores do órgão.</a></li>
+        </ul>
+    </section>  
+
     <section id="comissao_desempenho" class="tela">
-      <h1>Comissão - Desempenho no Exercício das Atribuições</h1>
+      <h1>Comissão Setorial de Evolução Funcional  - Desempenho no Exercício das Atribuições</h1>
         <ul class="lista-links">
           <li><a href="pagina1.html">Analisar Recurso da nota da Avaliação de Desempenho Individual (após Pedido de Reconsideração da chefia)</a></li>
         </ul>
     </section>
 
     <section id="comissao_aperfeicoamento" class="tela">
-      <h1>Comissão - Aperfeiçoamento</h1>
+      <h1>Comissão Setorial de Evolução Funcional - Aperfeiçoamento</h1>
       <ul class="lista-links">
         <li><a href="pagina1.html">- Analisar os Recursos das Ações Educacionais invalidadas pela Chefia.</a></li>
       </ul>
     </section>
 
     <section id="comissao_responsabilidades" class="tela">
-      <h1>Comissão - Assunção de Responsabilidades</h1>
+      <h1>Comissão Setorial de Evolução Funcional - Assunção de Responsabilidades</h1>
       <h4>Validar (após manifestação prévia da Chefia):</h4>
         <ul class="lista-links">
           <li><a href="pagina5.html">Publicação de artigos, livros ou pesquisas científicos</a></li>
@@ -499,16 +575,81 @@ title: Promove
     </section>
 
     <section id="comissao_titulacao" class="tela">
-      <h1>Comissão - Titulação Acadêmica</h1>
+      <h1>Comissão Setorial de Evolução Funcional - Titulação Acadêmica</h1>
         <ul class="lista-links">
           <li><a href="pagina1.html">Validar todos os títulos/qualificações submetidos à análise pelo servidor, após manifestação prévia da chefia.</a></li>
         </ul>
     </section>
 
     <section id="comissao_qualificacao" class="tela">
-      <h1>Comissão - Titulação e Qualificação Acadêmica</h1>
+      <h1>Comissão Setorial de Evolução Funcional - Titulação e Qualificação Acadêmica</h1>
       <ul class="lista-links">
         <li><a href="pagina1.html">Validar todos os títulos/qualificações submetidos à análise pelo servidor, após manifestação prévia da chefia.</a></li>
+      </ul>
+    </section>
+    <section id="comissao_efetivacao" class="tela">
+      <h1>Comissão Setorial de Evolução Funcional - Efetivação da Evolução Funcional</h1>
+      <ul class="lista-links">
+        <li><a href="pagina1.html">Acompanhar o quadro de pontuação dos servidores.</a></li>
+        <li><a href="pagina1.html">Elaborar o Relatório Consolidado dos servidores aptos à Evolução Funcional.</a></li>
+        <li><a href="pagina1.html">Encaminhar o Relatório Consolidado ao Titular do órgão.</a></li>
+      </ul>
+    </section>
+
+
+ <!-- COMISSÃO CENTRAL -->
+    <section id="comissaoC" class="tela">
+      <h1>Comissão Central de Evolução Funcional</h1>
+      <p>Conteúdo sobre Comissão Central de Evolução Funcional</p>
+    </section>
+
+    <section id="comissaoC_tee" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Tempo de efetivo Exerício no nível</h1>
+        <ul class="lista-links">
+          <li><a href="pagina1.html">Acompanhar o Tempo de efetivo Exerício no nível dos servidores do PCR.</a></li>
+        </ul>
+    </section> 
+
+    <section id="comissaoC_desempenho" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Desempenho no Exercício das Atribuições</h1>
+        <ul class="lista-links">
+          <li><a href="pagina1.html">Acompanhar os dados relativos ao Desempenho no Exercício das Atribuições dos servidores do PCR.</a></li>
+        </ul>
+    </section>
+
+    <section id="comissaoC_aperfeicoamento" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Aperfeiçoamento</h1>
+      <ul class="lista-links">
+        <li><a href="pagina1.html">Acompanhar os dados relativos ao Aperfeiçoamento dos servidores do PCR.</a></li>
+      </ul>
+    </section>
+
+    <section id="comissaoC_responsabilidades" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Assunção de Responsabilidades</h1>
+      <ul class="lista-links">
+        <li><a href="pagina1.html">Acompanhar os dados relativos à Assunção de Responsabilidades dos servidores do PCR.</a></li>
+      </ul>
+    </section>
+
+    <section id="comissaoC_titulacao" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Titulação Acadêmica</h1>
+        <ul class="lista-links">
+          <li><a href="pagina1.html">Acompanhar os dados relativos à Titulação Acadêmica dos servidores do PCR.</a></li>
+        </ul>
+    </section>
+
+    <section id="comissaoC_qualificacao" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Titulação e Qualificação Acadêmica</h1>
+      <ul class="lista-links">
+        <li><a href="pagina1.html">companhar os dados relativos à Titulação e Qualificação Acadêmica dos servidores do PCR.</a></li>
+      </ul>
+    </section>
+    <section id="comissaoC_efetivacao" class="tela">
+      <h1>Comissão Central de Evolução Funcional - Efetivação da Evolução Funcional</h1>
+      <ul class="lista-links">
+        <li><a href="pagina1.html">Acompanhar o quadro de pontuação dos servidores.</a></li>
+        <li><a href="pagina1.html">Acesso ao Relatório Consolidado dos servidores aptos à Evolução Funcional.</a></li>
+        <li><a href="pagina1.html">Acompanhara emissão do Relatório Consolidado ao Titular do órgão.</a></li>
       </ul>
     </section>
 
