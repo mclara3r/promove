@@ -267,3 +267,12 @@ td {
   display: none;
 }
 
+
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+
